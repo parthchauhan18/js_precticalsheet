@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .header{
+            background-color: rgb(188, 16, 33);
+        }
+        .margin{
+            margin: 0px 170px;
+        }
+        .padding{
+            padding: 30px 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        .minisection{
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .header .minisection .nav{
+            flex: 1;
+        }
+        .header .minisection .nav ul{
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+        }
+        
+        .header .minisection .nav-toggle{
+            flex: 1;
+        }
+        .header .minisection .nav-toggle ul{
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+        }
+
+        
+        .header .minisection .logo{
+            flex: .5;
+        }
+        .header .minisection .btn{
+            flex: .5;
+            text-align: center;
+            cursor: pointer;
+        }
+        .header .minisection .fa-bars{
+            display: none;
+            font-size: 28px;
+            position: relative;
+        }
+        @media (max-width:576px) {
+            .margin{
+                margin: 0px 20px;
+            }
+            .header .minisection .nav{
+            flex: 1;
+            display: none;
+        }
+        .header .minisection .nav-toggle{
+            display: block;
+            position: absolute;
+            top: 88px;
+            left: 0;
+            color: black;
+            background-color: rgb(169, 171, 162);
+            width: 100%;
+            text-align: center;
+        }
+        .header .minisection .nav-toggle ul{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 18px;
+        }
+        .header .minisection .btn{
+            text-align: end;
+        }
+        .header .minisection .btn .fa-bars{
+            display: block;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <section class="header">
+        <div class="margin">
+            <div class="padding">
+                <div class="minisection">
+                <div class="logo">
+                    <h1>javascript</h1>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>contect</li>
+                        <li>help</li>
+                    
+                    </ul>
+                </div>
+                <div class="btn">
+                    <div class="fa-solid fa-bars"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+<script>
+    let bar=document.querySelector(".fa-bars");
+    let navigation=document.querySelector(".nav");
+    bar.addEventListener("click",function(){
+        navigation.classList.toggle("nav-toggle");
+    })  
+
+</script>
+</html>

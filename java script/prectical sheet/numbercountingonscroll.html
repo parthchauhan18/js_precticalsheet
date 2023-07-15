@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      header .div1 {
+        height: 900px;
+        width: 100%;
+        background-color: aquamarine;
+      }
+      section .div2{
+        height: 500px;
+        width: 100%;
+        background-color: #44856f;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      section .div2 .count {
+        height: 100px;
+        width: 100px;
+        background-color: azure;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="div1"></div>
+    </header>
+    <section>
+      <div class="div2">
+        <div class="count" id="count_910"></div>
+        <div class="count" id="count_1399"></div>
+        <div class="count" id="count_1777"></div>
+        <div class="count" id="count_2254"></div>
+      </div>
+    </section>
+    <script>
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 500) {
+          let updatation = setInterval(counting_fun1, 1);
+          let start_num = 620;
+          function counting_fun1() {
+            let count_910 = document.getElementById("count_910");
+            count_910.innerHTML = start_num++;
+            if (start_num == 911) {
+              clearInterval(updatation);
+            }
+          }
+
+          let updatation1 = setInterval(counting_fun2, 1);
+          let start_num1 = 1109;
+          function counting_fun2() {
+            let count_1399 = document.getElementById("count_1399");
+            count_1399.innerHTML = start_num1++;
+            if (start_num1 == 1400) {
+              clearInterval(updatation1);
+            }
+          }
+
+          let updatation3 = setInterval(counting_fun3, 1);
+          let start_num3 = 1487;
+          function counting_fun3() {
+            let count_1777 = document.getElementById("count_1777");
+            count_1777.innerHTML = start_num3++;
+            if (start_num3 == 1778){
+              clearInterval(updatation3);
+            }
+          }
+
+          let updatation4 = setInterval(counting_fun4, 1);
+          let start_num4 = 1964;
+          function counting_fun4(){
+            let count_2254 = document.getElementById("count_2254");
+            count_2254.innerHTML = start_num4++;
+            if (start_num4 == 2255){
+              clearInterval(updatation4);
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

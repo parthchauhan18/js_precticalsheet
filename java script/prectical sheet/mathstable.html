@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            height: fit-content;
+            width: fit-content;
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input_type" name="">
+        <button id="btn" onclick="return maths_table()">Display</button>
+    <div id="res"></div>
+    
+</body>
+
+<script>
+    function maths_table(){
+        let input_id = document.getElementById("input_type").value;
+        let res = document.getElementById("res");
+        let result="";
+
+        for(let i=1;i<=10;i++)
+        {
+            result = result + input_id + "x" + i + "=" + input_id*i +"<br>";
+
+        }
+        document.getElementById("res").innerHTML=result;
+        res.style.border="1px solid black";
+
+    }
+</script>
+</html>

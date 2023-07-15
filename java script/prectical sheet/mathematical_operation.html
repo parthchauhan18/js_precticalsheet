@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>math
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .math_operation{
+            border: 3px solid black;
+            padding: 20px;
+            width: fit-content;
+        }
+        .math_operation .num{
+            display: flex;
+            gap: 40px;
+            margin: 20px;
+            align-items: center;
+        }
+        input{
+            height: 25px;
+            width: 200px;
+        }
+        .math_operation .ope{
+            display: flex;
+            gap: 60px;
+        }
+        button{
+            height: 50px;
+            width: 70px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="math_operation">
+        <h2>Maths Operation</h2>
+        <div class="num">
+            <h3>Enter 1st number:</h3>
+            <div class=""><input type="text" name="" id="number1"></div>
+        </div>
+        <div class="num">
+            <h3>Enter 2nd number:</h3>
+            <div class=""><input type="text" name="" id="number2"></div>
+        </div>
+        <div class="ope">
+        <div class="operation">
+            <button onclick="add()">+</button>
+            <button onclick="subtraction()">-</button>
+            <button onclick="multi()">*</button>
+            <br><br>
+            <button onclick="division()">/</button>
+        </div>
+        <div class="result"><h3>Answer is :</h3> <h2 id="result"></h2></div>
+        </div>
+    </div>
+</body>
+<script>
+    function add(){
+        var num1=document.getElementById("number1").value;
+        var num2=document.getElementById("number2").value;
+        let res=parseFloat(num1)+parseFloat(num2);
+        document.getElementById("result").innerHTML=res;
+    }
+    function subtraction(){
+        var num1=document.getElementById("number1").value;
+        var num2=document.getElementById("number2").value;
+        let res=parseFloat(num1)-parseFloat(num2);
+        document.getElementById("result").innerHTML=res;
+    }
+    function multi(){
+        var num1=document.getElementById("number1").value;
+        var num2=document.getElementById("number2").value;
+        let res=parseFloat(num1)*parseFloat(num2);
+        document.getElementById("result").innerHTML=res;
+    }
+    function division(){
+        var num1=document.getElementById("number1").value;
+        var num2=document.getElementById("number2").value;
+        let res=parseFloat(num1)/parseFloat(num2);
+        document.getElementById("result").innerHTML=res;
+    }
+
+</script>
+</html>

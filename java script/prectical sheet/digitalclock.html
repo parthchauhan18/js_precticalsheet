@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="show()">
+    <h1 id="clock"></h1>
+</body>
+
+<script>
+
+    function show(){
+        let d=new Date();
+        let hour=d.getHours();
+        let min=d.getMinutes();
+        let sec=d.getSeconds();
+        let session="AM";
+
+        hour=hour<10? hour="0" + hour : hour;
+        min=min<10? min="0" + min : min;
+        sec=sec<10? sec="0" + sec : sec;
+        session=hour==12? session="PM" : session;
+        let x=hour +":" + min +":" + sec +":" + session;
+        document.getElementById("clock").innerHTML = x;
+        setInterval(show, 1000);
+
+        
+    }
+    
+</script>
+</html>

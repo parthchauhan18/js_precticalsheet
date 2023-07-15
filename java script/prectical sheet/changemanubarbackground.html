@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            height: 2000px;
+        }
+        .header{
+            background-color: cadetblue;
+            position: fixed;
+            width: 100%;
+            transition: .5s all ease-in-out;
+        }
+        .margin{
+            margin: 0px 170px;
+        }
+        .padding{
+            padding: 30px 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        .minisection{
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .header .minisection .nav{
+            flex: 1;
+        }
+        .header .minisection .nav ul{
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+        }
+        .header .minisection .logo{
+            flex: .5;
+        }
+        .header .minisection .btn{
+            flex: .5;
+            text-align: center;
+            cursor: pointer;
+        }
+        .header .minisection .fa-bars{
+            font-size: 28px;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="header">
+        <div class="margin">
+            <div class="padding">
+                <div class="minisection">
+                <div class="logo">
+                    <h1>javascript</h1>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>Buy</li>
+                        <li>Contact</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <div class="fa-solid fa-bars"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+<script>
+    window.addEventListener("scroll",function(){
+        let head=document.querySelector(".header");
+        if(window.scrollY>0){
+            head.style.backgroundColor="maroon";
+        }else{
+            head.style.backgroundColor="cadetblue";
+
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div{
+            height: 200px;
+            width: 200px;
+            color: white;
+            text-align: center;
+         }
+    </style>
+</head>
+<body>
+    <label for="">Set color</label>
+    <input type="color" name="" id="color_id">
+    <button onclick="plate()">Set color</button>
+    <div class="div">Hello Good-morning</div>
+</body>
+
+<script>
+    function plate()
+    {
+        let parth=document.getElementById("color_id").value;
+        let result=document.querySelector("div");
+        result.style.backgroundColor=parth;
+    }
+</script>
+</html>
